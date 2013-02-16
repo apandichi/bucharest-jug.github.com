@@ -3,6 +3,10 @@ layout: default
 title: JUG București ediția 6
 category : editii
 ---
+{% comment %}<!--
+    We define variables and capture text. They are merged with the template partial included as the last line of
+    this file. To cange the layout of the page, change that file.
+-->{% endcomment %}
 
 {% assign numar_editie = 6 %}
 
@@ -24,16 +28,16 @@ category : editii
 
 {% capture prezentare_ro %}
 <ul class="talks">
-    <li><a href="http://www.linkedin.com/pub/alex-proca/27/43b/956">Alex Proca</a> - Introducere în OSGI - 
-	disponibilă <a href="http://www.slideshare.net/alexproca1/osgi-overview">aici</a></li>
-    <li><a href="https://www.linkedin.com/pub/eugen-paraschiv/11/284/45">Eugen Paraschiv</a> - REST cu Spring - 
-	disponibilă <a href="http://www.slideshare.net/EugenParaschiv/rest-with-spring">aici</a></li>
+    <li><a href="http://www.linkedin.com/pub/alex-proca/27/43b/956">Alex Proca</a> - Introducere în OSGI -
+        disponibilă <a href="http://www.slideshare.net/alexproca1/osgi-overview">aici</a></li>
+    <li><a href="https://www.linkedin.com/pub/eugen-paraschiv/11/284/45">Eugen Paraschiv</a> - REST cu Spring -
+        disponibilă <a href="http://www.slideshare.net/EugenParaschiv/rest-with-spring">aici</a></li>
 </ul>
 {% endcapture %}
 
 {% capture prezentare_en %}
 <ul class="talks">
-    <li><a href="http://www.linkedin.com/pub/alex-proca/27/43b/956">Alex Proca</a> - Intro to OSGI - 
+    <li><a href="http://www.linkedin.com/pub/alex-proca/27/43b/956">Alex Proca</a> - Intro to OSGI -
         available <a href="http://www.slideshare.net/alexproca1/osgi-overview">here</a></li>
     <li><a href="https://www.linkedin.com/pub/eugen-paraschiv/11/284/45">Eugen Paraschiv</a> - REST with Spring -
         available <a href="http://www.slideshare.net/EugenParaschiv/rest-with-spring">here</a></li>
@@ -56,4 +60,4 @@ category : editii
 </div>
 {% endcapture %}
 
-{% include themes/bjug/editie.html %}
+{% include themes/bjug2/editie.html %}

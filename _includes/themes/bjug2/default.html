@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>{{ page.title }}</title>
+    {% if page.description %}
+    <meta name="description" content="{{ page.description }}">
+    {% endif %}
+    <meta name="author" content="{{ site.author.name }}">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link rel="stylesheet" href="{{ BASE_PATH }}/static/css/reset.css">
+    <link rel="stylesheet" href="{{ BASE_PATH }}/static/css/fontface.css">
+    <link rel="stylesheet" href="{{ BASE_PATH }}/static/css/main.css">
+    <link rel="stylesheet" href="{{ BASE_PATH }}/static/css/bootstrap-responsive.min.css">
+
+    <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="atom.xml">
+
+    <script src="{{ BASE_PATH }}/static/js/jquery-1.7.2.min.js"></script>
+    <script src="{{ BASE_PATH }}/static/js/bootstrap.min.js"></script>
+    <script src="{{ BASE_PATH }}/static/js/bootstrap-tab.js"></script>
+    <script src="{{ BASE_PATH }}/static/js/angular.min.js" type="text/javascript"></script>
+
+</head>
+
+<body class="fullheight">
+
+<div class="flexboxlayout fullheight">
+    <div class="wrapper">
+        <div class="row-fluid">
+            <div class="span3" id="menu_wrapper">
+                <!-- We use JavaScript to load images after all the text has been loaded/displayed, hence the use of src="images/transparent.png" below -->
+                <h2 id="menu_header"><img id="bjug_logo" src="{{ BASE_PATH}}/static/images/logos/bjug_logo.png"
+                                          style="max-width: 100%;"></h2>
+
+                <div id="menu">
+                    <ul style="font-family: 'OpenSansRegular';">
+                        <li class="bjugmenuitem" data-id="#home" ng-click="load('fragments/home.html')"><a
+                                href="/">Home</a>
+                        </li>
+                        <li class="bjugmenuitem" data-id="#prev"><a href="#prev">Previous meetups</a></li>
+                        <li class="bjugmenuitem" data-id="#feat"><a href="#feat">Featured events</a></li>
+                        <li class="bjugmenuitem" data-id="#sponsors"><a href="/sponsori.html">Sponsors</a></li>
+                        <li class="bjugmenuitem" data-id="#meta"><a href="#meta">Meta</a></li>
+                    </ul>
+                </div>
+                <!-- id="menu" -->
+            </div>
+            <!-- id="menu_wrapper" -->
+
+            <div class="main span8 offset1">
+                <h2 id="bjug_heading" style="margin-bottom: 20px;">Bucharest JUG</h2>
+                {{content}}
+            </div>
+            <!-- class="main span8 offset1" -->
+        </div>
+        <!-- class="row-fluid" -->
+    </div>
+    <!-- class="wrapper" -->
+
+    <div class="footer-wrapper">
+        <div class="footer"><p>&copy; {{ site.author.name }} 2012
+            with help from <a href="http://jekyllbootstrap.com" target="_blank"
+                              title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+            and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p></div>
+    </div>
+
+    <div style="display: none;">
+        <img id="arrow_hover" src="">
+        <img id="grey_gradient" src="">
+    </div>
+</div>
+
+{% include JB/analytics %}
+</body>
+</html>
